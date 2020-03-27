@@ -120,6 +120,26 @@ namespace Garbochess.NET
                     }
                 }
             }
+
+            if(dupe)
+            {
+                if(colDiff)
+                {
+                    result += FormatSquare(from)[0];
+                }
+                else if (rowDiff)
+                {
+                    result += FormatSquare(from)[1];
+                }
+                else
+                {
+                    result += FormatSquare(from);
+                }
+            }
+            else if (pieceType == piecePawn && (g_board[to] != 0 || (move & moveflagEPC)))
+            {
+
+            }
         }
 
     }
